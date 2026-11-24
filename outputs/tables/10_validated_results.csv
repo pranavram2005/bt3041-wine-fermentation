@@ -1,0 +1,25 @@
+,outcome,temperature,n,preferred_test,statistic_permuted,p_parametric_BH,parametric_call,pBH_matched,permutation_call,partial_eta_sq,eta2_ci95_low,eta2_ci95_high,max_strain_gap,gap_ci95_low,gap_ci95_high,scale,call_changed
+0,MaxViable,12,54,ANOVA,classical F,0.0,significant,0.0003199360127974405,significant,0.877,0.764,0.897,0.324,0.289,0.379,log10,False
+1,MaxViable,18,54,Welch ANOVA,Welch F,0.000219,significant,0.0003199360127974405,significant,0.876,0.763,0.896,0.352,0.271,0.436,log10,False
+2,MaxViable,25,54,Welch ANOVA,Welch F,3.1e-05,significant,0.0003199360127974405,significant,0.503,0.183,0.579,0.22,0.199,0.351,log10,False
+3,MaxViable,TVAR,54,Welch ANOVA,Welch F,2e-06,significant,0.0005998800239952009,significant,0.766,0.567,0.804,0.256,0.193,0.33,log10,False
+4,FinalSuccinate,12,54,ANOVA,classical F,1.6e-05,significant,0.0003199360127974405,significant,0.552,0.243,0.622,0.243,0.202,0.348,raw,False
+5,FinalSuccinate,18,54,Kruskal-Wallis,rank (H),0.053764,not significant,0.0003199360127974405,significant,0.689,0.441,0.74,0.268,0.19,0.478,raw,True
+6,FinalSuccinate,25,54,Welch ANOVA,Welch F,4e-06,significant,0.0003199360127974405,significant,0.769,0.572,0.807,0.458,0.388,0.559,raw,False
+7,FinalSuccinate,TVAR,54,Welch ANOVA,Welch F,2.6e-05,significant,0.0003199360127974405,significant,0.672,0.414,0.725,0.362,0.294,0.505,raw,False
+8,MalateConsumed,12,54,ANOVA,classical F,1.9e-05,significant,0.0003199360127974405,significant,0.546,0.236,0.617,0.793,0.641,1.44,raw,False
+9,MalateConsumed,18,54,ANOVA,classical F,4e-06,significant,0.0003199360127974405,significant,0.583,0.285,0.649,0.729,0.638,1.068,raw,False
+10,MalateConsumed,25,54,ANOVA,classical F,0.008763,significant,0.009826606107349957,significant,0.359,0.035,0.444,0.561,0.459,0.819,raw,False
+11,MalateConsumed,TVAR,54,Kruskal-Wallis,rank (H),0.137625,not significant,0.07261156464359303,not significant,0.266,0.0,0.348,0.496,0.346,1.016,raw,False
+12,FinalAcetate,12,54,ANOVA,classical F,0.0,significant,0.0003199360127974405,significant,0.696,0.453,0.746,0.301,0.237,0.493,raw,False
+13,FinalAcetate,18,54,Welch ANOVA,Welch F,0.140904,not significant,0.0003199360127974405,significant,0.828,0.675,0.856,0.226,0.18,0.397,raw,True
+14,FinalAcetate,25,54,Welch ANOVA,Welch F,0.638909,not significant,0.0003199360127974405,significant,0.746,0.533,0.787,0.257,0.181,0.495,raw,True
+15,FinalAcetate,TVAR,54,Welch ANOVA,Welch F,0.105485,not significant,0.0003199360127974405,significant,0.67,0.411,0.723,0.24,0.169,0.367,raw,True
+16,FinalResidualSugar,12,54,Welch ANOVA,Welch F,0.020207,significant,0.004799040191961607,significant,0.46,0.134,0.54,1.76,1.282,2.541,log1p,False
+17,FinalResidualSugar,18,54,Kruskal-Wallis,rank (H),0.152521,not significant,0.39812037592481503,not significant,0.16,0.0,0.22,1.03,0.569,1.915,log1p,False
+18,FinalResidualSugar,25,54,Kruskal-Wallis,rank (H),0.115961,not significant,0.04013742706004254,significant,0.305,0.0,0.39,0.015,0.005,0.03,log1p,True
+19,FinalResidualSugar,TVAR,54,ANOVA,classical F,0.006176,significant,0.004265813503965873,significant,0.373,0.048,0.458,1.507,0.792,2.482,log1p,False
+20,T90_h,12,54,Welch ANOVA,Welch F,0.018771,significant,0.004234447228201419,significant,0.532,0.218,0.604,161.585,106.491,265.316,raw,False
+21,T90_h,18,54,Welch ANOVA,Welch F,0.020207,significant,0.007198560287942412,significant,0.502,0.181,0.578,128.482,109.609,194.11,raw,False
+22,T90_h,25,54,Welch ANOVA,Welch F,0.167445,not significant,0.0003199360127974405,significant,0.798,0.623,0.832,57.871,37.119,100.85,raw,True
+23,T90_h,TVAR,53,Welch ANOVA,Welch F,0.744111,not significant,0.0003199360127974405,significant,0.679,0.421,0.731,128.466,90.515,251.442,raw,True

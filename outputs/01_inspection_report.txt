@@ -1,0 +1,97 @@
+==============================================================================
+1. WORKBOOK STRUCTURE
+==============================================================================
+  sheet 'Explanation': 49 rows x 21 cols
+  sheet 'Data': 1951 rows x 49 cols
+  'Explanation' holds only the variable list and units (no other metadata).
+  'Data' parsed: 1950 observations x 49 columns
+
+==============================================================================
+2. EXPERIMENTAL DESIGN
+==============================================================================
+  Strains (9)      : DV10, GALA, OPA, SAI, TXL, VIN13, W12, X16, X5
+  Temperature (4)  : 12, 18, 25, TVAR   (TVAR = time-varying regime)
+  Initial sugar (2): 210, 250 g/L  (NOMINAL label - see data-quality note)
+  Replicates (3)   : R1, R2, R3  (biological)
+  Sampling points  : t0..t8 (9 per fermentation), 105 distinct clock times
+
+  => 9 strains x 4 temperatures x 2 sugar levels x 3 reps = 216 fermentation
+     units; x 9 sampling points = 1944 observations. FULLY BALANCED.
+     The raw sheet has 1950 rows: 6 extra 't5bis' samples taken only for
+     TXL and VIN13 at 18 degC / 250 g/L. Excluded to keep the design balanced.
+
+  Design type: three-way factorial (Strain x Temperature x InitialSugar)
+     with REPEATED MEASURES over 9 sampling points on each unit.
+     => observations within a unit are NOT independent; any test must either
+        collapse each unit to one summary value, or model the repetition.
+
+==============================================================================
+3. SAMPLING TIMES ARE NOT ALIGNED
+==============================================================================
+Time_name     t0    t1    t2     t3     t4     t5     t6     t7     t8
+Temperature                                                           
+12           0.0  53.2  95.5  167.5  192.6  251.1  372.4  528.5  724.6
+18           0.0  28.3  53.4   82.0  118.9  162.3  218.4  267.6  477.0
+25           0.0   7.3  23.7   30.8   53.2   76.4   98.8  169.6  283.9
+TVAR         0.0   6.6  25.7   33.0   50.0   96.2  167.4  240.5  456.1
+
+  t0..t8 are *nominal* labels, not fixed clock times. The mean time to the
+  final sample is 725 h at 12 degC but 284 h at 25 degC, and it varies
+  between strains within one temperature (at 12 degC: W12 671 h vs
+  VIN13 803 h). Sampling was event-driven - samples were taken as each
+  fermentation progressed.
+  CONSEQUENCES:
+   - never average a variable across strains at a given t-label as if the
+     elapsed time were the same;
+   - time-to-completion is itself an OUTCOME, not a nuisance - it should be
+     derived and tested;
+   - kinetic comparisons need interpolation onto a common basis.
+
+==============================================================================
+4. DATA-QUALITY CHECKS
+==============================================================================
+  Exact duplicate rows                    : 0
+  Duplicate design keys                   : 0
+
+  MISSINGNESS IS STRUCTURAL, NOT RANDOM - whole variable blocks were not
+  assayed at certain sampling points:
+   - Cell counts                   14 rows incomplete; absent/partial at t3, t4
+   - Sugars                         0 rows incomplete; complete
+   - Primary metabolites            0 rows incomplete; complete
+   - Organic acids                  0 rows incomplete; complete
+   - Nitrogen sources             300 rows incomplete; absent/partial at t4, t6
+   - Volatile aroma compounds     864 rows incomplete; absent/partial at t0, t1, t3, t5
+   Amino acids: not measured at t4/t6 for 6 of the 8 temp x sugar batches.
+   Volatiles  : measured ONLY at t2, t4, t6, t7, t8 (never t0, t1, t3, t5).
+   => Do NOT impute. Use the sampling points where a block actually exists.
+
+  NOMINAL vs MEASURED INITIAL SUGAR (mean measured g/L at t0):
+Temperature     12     18     25   TVAR
+MS                                     
+210          229.4  206.2  203.3  214.2
+250          266.6  248.2  242.3  244.9
+   Nominal 210 g/L musts actually measured 203-229 g/L depending on the
+   temperature batch; nominal 250 measured 242-267. Strains within a batch
+   share the same t0 value (same must), so this is batch variation, not noise.
+   => baseline sugar consumption on each unit's own t0, never on MS.
+
+  MONOTONICITY CHECK (residual sugar cannot increase during fermentation):
+   74 sample(s) show residual sugar rising by >2 g/L; 63 exceed their own t0 value.
+   affected units: 71 of 216; sampling points: ['t1', 't2', 't3']
+   worst cases:
+     TXL|12|250|R3          t1    sugar  346.49 g/L (+79.9 vs previous; t0 was 266.6; ethanol 0.15%)
+     OPA|25|250|R2          t1    sugar  289.29 g/L (+51.5 vs previous; t0 was 237.8; ethanol 0.16%)
+     TXL|12|250|R2          t2    sugar  297.72 g/L (+41.9 vs previous; t0 was 266.7; ethanol 0.29%)
+     OPA|25|250|R3          t1    sugar  281.51 g/L (+40.0 vs previous; t0 was 241.5; ethanol 0.17%)
+     DV10|25|210|R1         t1    sugar  241.47 g/L (+35.4 vs previous; t0 was 206.1; ethanol 0.20%)
+   These are analytical artefacts (likely HPLC dilution errors), not
+   biology: sugar cannot be produced during fermentation. FLAGGED, not
+   deleted - they are excluded only from kinetic fits, and they cannot
+   affect endpoint results because all of them occur at early samples.
+
+  OTHER SANITY CHECKS:
+   Viable > Total (impossible)             : 1
+   Negative concentrations                 : 0
+   Ethanol at t0 (should be ~0)            : max 0.229 %
+   Mean t0 viability (rehydrated dry yeast): 33.2 %
+   Fermentations reaching <2 g/L residual  : 184 of 216

@@ -1,0 +1,4 @@
+,label,n_groups,silhouette_in_PC_space
+0,Strain,9,-0.0848
+1,Temperature,4,0.0972
+2,MS (initial sugar),2,0.3715

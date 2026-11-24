@@ -1,0 +1,9 @@
+,outcome,scale,n,skew,resid_skew,shapiro_W,shapiro_p,levene_W,levene_p,normal_ok,equalvar_ok
+0,MaxViable,raw,216,0.722062,0.391431,0.978622,0.002299,15.640512,0.0,False,False
+1,MaxViable,log10,216,-0.089152,0.007376,0.994849,0.674761,15.088298,0.0,True,False
+2,FinalSuccinate,raw,216,0.57791,0.136548,0.994889,0.681264,4.17166,0.0,True,False
+3,MalateConsumed,raw,216,1.000122,0.423989,0.977193,0.001425,1.084222,0.35562,False,True
+4,FinalAcetate,raw,216,0.142181,-0.000222,0.993104,0.412766,6.49406,0.0,True,False
+5,FinalResidualSugar,raw,216,4.183998,2.350914,0.744343,0.0,2.504815,4.5e-05,False,False
+6,FinalResidualSugar,log1p,216,2.09573,0.98993,0.914648,0.0,2.190857,0.000465,False,False
+7,T90_h,raw,215,0.360518,0.291028,0.979431,0.003121,6.023217,0.0,False,False

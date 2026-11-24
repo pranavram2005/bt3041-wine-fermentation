@@ -1,0 +1,9 @@
+quantity,reported,revalidated,abs_diff,agree
+PC1-PC4 cumulative variance (%),81.8095,81.8095,0.0,True
+components with eigenvalue > 1,4.0,4.0,0.0,True
+silhouette by Strain in PC1-PC4,-0.0848,-0.0848,0.0,True
+silhouette by Temperature in PC1-PC4,0.0972,0.0972,0.0,True
+silhouette by MS (initial sugar) in PC1-PC4,0.3715,0.3715,0.0,True
+"ARI, Ward clusters vs Strain",-0.0131,-0.0131,0.0,True
+"ARI, Ward clusters vs Temperature",0.1909,0.1909,0.0,True
+"ARI, Ward clusters vs MS (initial sugar)",0.5583,0.5583,0.0,True

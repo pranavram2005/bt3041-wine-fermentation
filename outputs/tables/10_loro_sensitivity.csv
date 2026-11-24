@@ -1,0 +1,25 @@
+,outcome,temperature,validated_call,n_per_strain,subsets_significant,n_subsets,robust
+0,MaxViable,12,significant,4,3,3,True
+1,MaxViable,18,significant,4,3,3,True
+2,MaxViable,25,significant,4,3,3,True
+3,MaxViable,TVAR,significant,4,3,3,True
+4,FinalSuccinate,12,significant,4,3,3,True
+5,FinalSuccinate,18,significant,4,3,3,True
+6,FinalSuccinate,25,significant,4,3,3,True
+7,FinalSuccinate,TVAR,significant,4,3,3,True
+8,MalateConsumed,12,significant,4,3,3,True
+9,MalateConsumed,18,significant,4,3,3,True
+10,MalateConsumed,25,significant,4,1,3,False
+11,MalateConsumed,TVAR,not significant,4,0,3,True
+12,FinalAcetate,12,significant,4,3,3,True
+13,FinalAcetate,18,significant,4,3,3,True
+14,FinalAcetate,25,significant,4,3,3,True
+15,FinalAcetate,TVAR,significant,4,3,3,True
+16,FinalResidualSugar,12,significant,4,3,3,True
+17,FinalResidualSugar,18,not significant,4,0,3,True
+18,FinalResidualSugar,25,significant,4,1,3,False
+19,FinalResidualSugar,TVAR,significant,4,1,3,False
+20,T90_h,12,significant,4,3,3,True
+21,T90_h,18,significant,4,3,3,True
+22,T90_h,25,significant,4,3,3,True
+23,T90_h,TVAR,significant,4,3,3,True

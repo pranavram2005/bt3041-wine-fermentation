@@ -1,0 +1,7 @@
+Block,N_vars,Rows_incomplete,Affected_timepoints
+Cell counts,3,14,"t3, t4"
+Sugars,2,0,none
+Primary metabolites,2,0,none
+Organic acids,4,0,none
+Nitrogen sources,22,300,"t4, t6"
+Volatile aroma compounds,10,864,"t0, t1, t3, t5"

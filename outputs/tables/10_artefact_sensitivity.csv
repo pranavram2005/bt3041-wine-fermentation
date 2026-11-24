@@ -1,0 +1,25 @@
+,outcome,temperature,n_full,n_clean,strains_left,F_clean,p_clean,validated_call,clean_call,agree
+0,MaxViable,12,54,45,9,29.226,2.6644763753018683e-13,significant,significant,True
+1,MaxViable,18,54,34,9,23.962,1.1841507484359257e-09,significant,significant,True
+2,MaxViable,25,54,18,7,45.214,1.123006561015738e-06,significant,significant,True
+3,MaxViable,TVAR,54,48,9,16.044,4.845516139209959e-10,significant,significant,True
+4,FinalSuccinate,12,54,45,9,4.637,0.0006314014842383684,significant,significant,True
+5,FinalSuccinate,18,54,34,9,7.546,5.136248499988021e-05,significant,significant,True
+6,FinalSuccinate,25,54,18,7,58.003,3.405977461663699e-07,significant,significant,True
+7,FinalSuccinate,TVAR,54,48,9,10.872,8.320048430051612e-08,significant,significant,True
+8,MalateConsumed,12,54,45,9,4.93,0.0003904441643165637,significant,significant,True
+9,MalateConsumed,18,54,34,9,6.784,0.00011619485727147975,significant,significant,True
+10,MalateConsumed,25,54,18,7,4.318,0.020802844122328502,significant,significant,True
+11,MalateConsumed,TVAR,54,48,9,1.269,0.28836645663094285,not significant,not significant,True
+12,FinalAcetate,12,54,45,9,12.249,3.738528066193184e-08,significant,significant,True
+13,FinalAcetate,18,54,34,9,13.937,2.541372819965276e-07,significant,significant,True
+14,FinalAcetate,25,54,18,7,17.69,8.563861918220408e-05,significant,significant,True
+15,FinalAcetate,TVAR,54,48,9,10.529,1.2337245536217875e-07,significant,significant,True
+16,FinalResidualSugar,12,54,45,9,4.691,0.0005770402521610389,significant,significant,True
+17,FinalResidualSugar,18,54,34,9,1.267,0.30588563145458086,not significant,not significant,True
+18,FinalResidualSugar,25,54,18,7,0.686,0.6658958760799205,significant,not significant,False
+19,FinalResidualSugar,TVAR,54,48,9,2.837,0.014249540307820116,significant,significant,True
+20,T90_h,12,54,45,9,4.948,0.0003789906004143148,significant,significant,True
+21,T90_h,18,54,34,9,3.999,0.003890266199544544,significant,significant,True
+22,T90_h,25,54,18,7,35.966,3.3189722166511976e-06,significant,significant,True
+23,T90_h,TVAR,53,47,9,8.472,1.829952032260848e-06,significant,significant,True

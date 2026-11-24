@@ -1,0 +1,12 @@
+# Course material - lecture slides and past question papers.
+# Not ours to redistribute, and not part of the project.
+Tests/
+
+# Python
+__pycache__/
+*.pyc
+
+# AI-use record - kept out of the repository
+AI_USE_LOG.md
+ai_prompts.md
+ai_chat_history.md

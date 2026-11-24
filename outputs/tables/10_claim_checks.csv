@@ -1,0 +1,17 @@
+claim,recomputed,as_reported,verdict
+216 fermentation units (9 strains x 4 regimes x 2 must sugars x 3 reps),216,216,PASS
+1944 observations after dropping the 6 t5bis rows,1944,1944,PASS
+balanced design: every strain has the same number of units,1,1,PASS
+184 of 216 fermentations finish dry (< 2 g/L residual sugar),184,184,PASS
+T90 is missing for exactly one unit (GALA|TVAR|250|R1),1,1,PASS
+strain x temperature interaction significant for all 6 outcomes,6,6,PASS
+strain effect significant in 15 of 24 outcome x regime cells,15,15,PASS
+all 6 outcomes separate by strain at 12 degC,6,6,PASS
+final ethanol gap between the 210 and 250 g/L musts (% v/v),2.97,2.97,PASS
+step-5 F for strain reproduced in every cell with a balanced design,23,23,PASS
+every call that changed on validation is one where step 5 did not adjust for must sugar,0,0,PASS
+validated permutation test finds a strain effect in 22 of 24 cells,22,22,PASS
+W12 is in the top three on T90 in all four regimes,4,4,PASS
+VIN13 has the widest rank range across regimes,VIN13,VIN13,PASS
+"clusters track must sugar, not strain (ARI sugar > ARI strain)",0.558,-0.013,PASS
+every unit-level feature reproduces to within 1e-6 of a second implementation,1,1,PASS

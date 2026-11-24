@@ -1,0 +1,56 @@
+Variable,Block,Unit,Type,N_nonmissing,N_missing,Description
+Strain,Design factor,,categorical,1950,0,Commercial S. cerevisiae wine yeast strain (9 levels)
+Rep,Design factor,,categorical,1950,0,Biological replicate fermentation (R1-R3)
+Time_name,Design factor,,categorical,1950,0,"Nominal sampling point label (t0-t8, plus t5bis)"
+Time,Design factor,h,numeric,1950,0,Accumulated fermentation time at sampling
+Temperature,Design factor,degC,categorical,1950,0,"Fermentation temperature regime: 12, 18, 25 degC, or TVAR (time-varying)"
+MS,Design factor,g/L,factor (nominal),1950,0,Initial must sugar concentration (210 or 250 g/L)
+Viable,Cell counts,cells/mL,numeric,1944,6,Viable yeast cell concentration
+Dead,Cell counts,cells/mL,numeric,1944,6,Dead yeast cell concentration
+Total,Cell counts,cells/mL,numeric,1936,14,Total yeast cell concentration
+Glucose,Sugars,g/L,numeric,1950,0,Residual glucose
+Fructose,Sugars,g/L,numeric,1950,0,Residual fructose
+Glycerol,Primary metabolites,g/L,numeric,1950,0,"Glycerol, an osmolyte/by-product of glycolysis"
+Ethanol,Primary metabolites,g/L,numeric,1950,0,"Ethanol, the principal fermentation product"
+Acetate,Organic acids,g/L,numeric,1950,0,Acetic acid (volatile acidity)
+Citrate,Organic acids,g/L,numeric,1950,0,Citric acid
+Malate,Organic acids,g/L,numeric,1950,0,L-malic acid
+Succinate,Organic acids,g/L,numeric,1950,0,Succinic acid
+Alanine,Nitrogen sources,mg/L,numeric,1644,306,"Alanine, an assimilable nitrogen source in the must"
+Arginine,Nitrogen sources,mg/L,numeric,1644,306,"Arginine, an assimilable nitrogen source in the must"
+Aspartate,Nitrogen sources,mg/L,numeric,1644,306,"Aspartate, an assimilable nitrogen source in the must"
+Cysteine,Nitrogen sources,mg/L,numeric,1644,306,"Cysteine, an assimilable nitrogen source in the must"
+Glutamate,Nitrogen sources,mg/L,numeric,1644,306,"Glutamate, an assimilable nitrogen source in the must"
+Glutamine,Nitrogen sources,mg/L,numeric,1644,306,"Glutamine, an assimilable nitrogen source in the must"
+Glycine,Nitrogen sources,mg/L,numeric,1644,306,"Glycine, an assimilable nitrogen source in the must"
+Histidine,Nitrogen sources,mg/L,numeric,1644,306,"Histidine, an assimilable nitrogen source in the must"
+Isoleucine,Nitrogen sources,mg/L,numeric,1644,306,"Isoleucine, an assimilable nitrogen source in the must"
+Leucine,Nitrogen sources,mg/L,numeric,1644,306,"Leucine, an assimilable nitrogen source in the must"
+Lysine,Nitrogen sources,mg/L,numeric,1644,306,"Lysine, an assimilable nitrogen source in the must"
+Methionine,Nitrogen sources,mg/L,numeric,1644,306,"Methionine, an assimilable nitrogen source in the must"
+NH4Cl,Nitrogen sources,mg/L,numeric,1644,306,Ammonium (inorganic assimilable nitrogen)
+Phenylalanine,Nitrogen sources,mg/L,numeric,1644,306,"Phenylalanine, an assimilable nitrogen source in the must"
+Proline,Nitrogen sources,mg/L,numeric,1644,306,"Proline, an assimilable nitrogen source in the must"
+Serine,Nitrogen sources,mg/L,numeric,1644,306,"Serine, an assimilable nitrogen source in the must"
+Threonine,Nitrogen sources,mg/L,numeric,1644,306,"Threonine, an assimilable nitrogen source in the must"
+Tryptophan,Nitrogen sources,mg/L,numeric,1644,306,"Tryptophan, an assimilable nitrogen source in the must"
+Tyrosine,Nitrogen sources,mg/L,numeric,1644,306,"Tyrosine, an assimilable nitrogen source in the must"
+Valine,Nitrogen sources,mg/L,numeric,1644,306,"Valine, an assimilable nitrogen source in the must"
+Ornithine,Nitrogen sources,mg/L,numeric,1644,306,"Ornithine, an assimilable nitrogen source in the must"
+GABA,Nitrogen sources,mg/L,numeric,1644,306,gamma-aminobutyric acid
+EthAcetate,Volatile aroma compounds,mg/L,numeric,1080,870,"EthAcetate, a fermentation-derived volatile aroma compound"
+Isobutanol,Volatile aroma compounds,mg/L,numeric,1080,870,"Isobutanol, a fermentation-derived volatile aroma compound"
+IsoamylAcetate,Volatile aroma compounds,mg/L,numeric,1080,870,"IsoamylAcetate, a fermentation-derived volatile aroma compound"
+IsoamylAlcohol,Volatile aroma compounds,mg/L,numeric,1080,870,"IsoamylAlcohol, a fermentation-derived volatile aroma compound"
+EthylHexanoate,Volatile aroma compounds,mg/L,numeric,1080,870,"EthylHexanoate, a fermentation-derived volatile aroma compound"
+EthOctanoate,Volatile aroma compounds,mg/L,numeric,1080,870,"EthOctanoate, a fermentation-derived volatile aroma compound"
+PhenEthAcetate,Volatile aroma compounds,mg/L,numeric,1080,870,"PhenEthAcetate, a fermentation-derived volatile aroma compound"
+PhenEtoh,Volatile aroma compounds,mg/L,numeric,1080,870,"PhenEtoh, a fermentation-derived volatile aroma compound"
+OctanoicAcid,Volatile aroma compounds,mg/L,numeric,1080,870,"OctanoicAcid, a fermentation-derived volatile aroma compound"
+DecanoicAcid,Volatile aroma compounds,mg/L,numeric,1080,870,"DecanoicAcid, a fermentation-derived volatile aroma compound"
+ResidualSugar,Derived,g/L,numeric,1944,0,Glucose + fructose remaining (derived)
+InitialSugar,Derived,g/L,numeric,1944,0,Measured glucose + fructose at t0 for that unit (derived)
+SugarConsumed,Derived,g/L,numeric,1944,0,InitialSugar - ResidualSugar (derived)
+FracFermented,Derived,fraction,numeric,1944,0,SugarConsumed / InitialSugar (derived)
+Viability,Derived,%,numeric,1930,14,100 x Viable / Total (derived)
+GlcFruRatio,Derived,ratio,numeric,1798,146,Glucose / Fructose (derived)
